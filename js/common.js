@@ -2,8 +2,8 @@ $(document).ready(function() {
 
 	//Попап менеджер FancyBox
 	//Документация: http://fancyapps.com/fancybox/
-	//<a class="fancybox"><img src="image.jpg" /></a>
-	//<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
+	//<a class="fancybox" rel="group" href="big_image_1.jpg"><img src="small_image_1.jpg" alt="" /></a>
+	//<a class="fancybox" rel="group" href="big_image_2.jpg"><img src="small_image_2.jpg" alt="" /></a>
 	$(".fancybox").fancybox();
 
 	//Навигация по Landing Page
