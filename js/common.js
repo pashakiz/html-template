@@ -1,5 +1,13 @@
 $(document).ready(function() {
 
+	//Parallax (Stellar)
+	//Документация: http://markdalgleish.com/projects/stellar.js/docs/
+	//<div class="image" data-stellar-background-ratio="0">...</div>
+	$.stellar({
+		horizontalScrolling: false,
+		verticalOffset: 0
+	});
+	
 	//Попап менеджер FancyBox
 	//Документация: http://fancyapps.com/fancybox/
 	//<a class="fancybox" rel="group" href="big_image_1.jpg"><img src="small_image_1.jpg" alt="" /></a>
