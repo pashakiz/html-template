@@ -2,8 +2,8 @@ $(document).ready(function() {
 
 	/* Placeholder
 		Пример вызова:
-		placeholder(".feedback__name);
-		placeholder(".feedback__email);
+		placeholder(".feedback__name");
+		placeholder(".feedback__email");
 		в html необходимо указать атрибут value
 		<input class="feedback__name" type="text" name="name" value="Имя Фамилия">
 		<input class="feedback__email" type="text" name="email" value="E-mail">
