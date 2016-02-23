@@ -59,6 +59,22 @@ $(document).ready(function() {
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
 	$("form").submit(function() {
+
+		var name = $(this).find("input[name='name']").val(),
+			email = $(this).find("input[name='email']").val();
+
+		if (!name || !email) {
+			alert("Заполните поля формы.");
+			return false;
+		}
+
+		var email_regexp = /.+@.+\..+/i;
+		var email_test = email_regexp.test(email);
+		if (!email_test) {
+			alert("Введен некоректный Email-адрес.");
+			return false;
+		}
+
 		$.ajax({
 			type: "POST",
 			url: "mail.php",
@@ -66,6 +82,7 @@ $(document).ready(function() {
 			success: function(data) {
 				//$('#order_status').html(data);
 				$('#order_status').html('Спасибо, Ваша заявка отправлена!');
+				console.log("jquery-ajax-mail-success");
 			},
 			error:  function(xhr, str){
 				alert('Возникла ошибка: ' + xhr.responseCode);
