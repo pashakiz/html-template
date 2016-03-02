@@ -79,13 +79,15 @@ $(document).ready(function() {
 			type: "POST",
 			url: "mail.php",
 			data: $("form").serialize(),
-			success: function(data) {
-				//$('#order_status').html(data);
+			success: function(response) {
+				//$('#order_status').html(response);
 				$('#order_status').html('Спасибо, Ваша заявка отправлена!');
 				console.log("jquery-ajax-mail-success");
+				console.log('response: ' + response);
 			},
 			error:  function(xhr, str){
 				alert('Возникла ошибка: ' + xhr.responseCode);
+				console.log('response: ' + xhr);
 			}
 		}).done(function() {
 			alert("Спасибо за заявку!");
