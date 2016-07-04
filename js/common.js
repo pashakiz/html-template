@@ -78,7 +78,7 @@ $(document).ready(function() {
 		$.ajax({
 			type: "POST",
 			url: "mail.php",
-			data: $("form").serialize(),
+			data: $(this).serialize(),
 			success: function(response) {
 				//$('#order_status').html(response);
 				$('#order_status').html('Спасибо, Ваша заявка отправлена!');
