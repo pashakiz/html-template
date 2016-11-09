@@ -7,7 +7,7 @@ $pagetitle = "Новая заявка с сайта \"$sitename\"";
 $name = trim($_POST["name"]);
 $phone = trim($_POST["phone"]);
 $text = trim($_POST["text"]);
-$ip = $_SERVER["REMOTE_ADDR"];
+$ip = trim($_SERVER["REMOTE_ADDR"]);
 
 $message = "Имя: $name \r\nТелефон: $phone \r\nТекст: $text \r\nIP: $ip";
 
